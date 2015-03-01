@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninlock", "Ninlock\Ninlock.csproj", "{18B7E67B-1CE8-459E-AAF9-90E7A4B14D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninlock.Tests", "Ninlock.Tests\Ninlock.Tests.csproj", "{94044406-0B69-49CA-9E7C-55ACC677188E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18B7E67B-1CE8-459E-AAF9-90E7A4B14D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B7E67B-1CE8-459E-AAF9-90E7A4B14D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B7E67B-1CE8-459E-AAF9-90E7A4B14D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B7E67B-1CE8-459E-AAF9-90E7A4B14D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94044406-0B69-49CA-9E7C-55ACC677188E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94044406-0B69-49CA-9E7C-55ACC677188E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94044406-0B69-49CA-9E7C-55ACC677188E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94044406-0B69-49CA-9E7C-55ACC677188E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
