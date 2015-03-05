@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="RedisExtensionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DistributedLockTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

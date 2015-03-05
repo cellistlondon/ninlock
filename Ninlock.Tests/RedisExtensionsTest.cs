@@ -23,7 +23,7 @@ namespace Ninlock.Tests
             {
                 using (await db.AcquireLockAsync("Lock2",TimeSpan.FromSeconds(2)))
                 {
-                    //await Task.Delay(TimeSpan.FromSeconds(0.1));
+                    await Task.Delay(TimeSpan.FromSeconds(0.5));
                     Debug.WriteLine("tick1");
                     counter = counter+1;
                     Debug.WriteLine("tock1");

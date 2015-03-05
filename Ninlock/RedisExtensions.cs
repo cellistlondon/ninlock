@@ -27,7 +27,7 @@ namespace Ninlock
 
         private class DataCacheLock : IDisposable
         {
-            private static StackExchange.Redis.IDatabaseAsync _db;
+            private StackExchange.Redis.IDatabaseAsync _db;
             public readonly RedisKey Key;
             public readonly RedisValue Value;
             public readonly TimeSpan? Expiry;
@@ -41,15 +41,15 @@ namespace Ninlock
             public static async Task<IDisposable> AcquireAsync(IDatabaseAsync db, string key, TimeSpan? expiry, TimeSpan? retryTimeout)
             {
                 DataCacheLock dataCacheLock = new DataCacheLock(db, key, expiry);
-                Func<Task<bool>> task = async () =>
+                Func<Task<bool>> task = () =>
                 {
                     try
                     {
-                        return await _db.LockTakeAsync(dataCacheLock.Key, dataCacheLock.Value, dataCacheLock.Expiry ?? TimeSpan.MaxValue);
+                        return db.LockTakeAsync(dataCacheLock.Key, dataCacheLock.Value, dataCacheLock.Expiry ?? TimeSpan.MaxValue);
                     }
                     catch
                     {
-                        return false;
+                        return Task.FromResult(false);
                     }
                 };
 
